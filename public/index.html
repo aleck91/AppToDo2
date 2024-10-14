@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Lista de Tareas</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--Estilos index-->
+        <link rel="stylesheet" href="index.css">
+        <!--Estilos google fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+    </head>
+    <!--Inicio cuerpo-->
+    <body>
+        <!--Contenedor principal-->
+        <div class="container">
+            <!--Titulo de la pagina-->
+            <h1>Lista de Tareas</h1>
+            <!--Contenedor buscador-->
+            <div class="search">
+                <!--Formulario para enviar tarea-->
+               <form action="">
+                    <Label>Titulo de la tarea:</Label>
+                    <!--Entrada del texto de la tarea-->
+                    <input type="text" class="rounded-input" name="" id="nombre" placeholder="Titulo tarea" maxlength="30">
+                    <Label>Descripcion de la tarea:</Label>
+                    <!--Entrada del texto de la tarea-->
+                    <input type="text" class="rounded-input" name="" id="descripcion" placeholder="Descripcion" maxlength="250">
+                    <!--Boton para agregar tarea-->
+                    <button type="button" onclick="agregarTarea()" class="btn-add">Agregar Tarea</button>
+               </form> 
+               <!--Cierre formulario-->
+            </div>
+            <!--Cierre contenedor buscador-->
+            <!--Contenedor de la lista-->
+            <div  id="listaTareas" class="li-container">
+                <ul>
+
+                </ul>
+            </div>
+            <!--Cierre contenedor de lista-->
+            <!--Contenedor cuando no hay tareas-->
+            <div class="empty">
+                <!--Mensaje sin tareas-->
+                <p>Sin tareas pendientes :)</p>
+            </div>
+            <!--Cierre contenedor sin tareas-->
+        </div>
+        <!--Cierre contenedor principal-->
+        <!--Referencia scrip-->
+        <script src="./main.js" async defer></script>  
+    </body>
+    <!--Cierre cuerpo-->
+</html>

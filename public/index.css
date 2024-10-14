@@ -1,0 +1,194 @@
+/*Estilos index*/
+/*Fonts google*/
+:root {
+    --default-font: "Dosis", sans-serif;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del cuerpo */
+body {
+    display: flex;
+    background-color: whitesmoke;
+    justify-content: center;
+    align-items: center; /* Alinea verticalmente */
+    min-height: 100vh; /* Asegura que el body ocupe al menos la altura de la pantalla */
+    font-family: var(--default-font);
+}
+
+/* Contenedor principal */
+.container {
+    margin: 5%;
+    display: grid;
+    background-color: white;
+    justify-items: center;
+    max-width: 50%;
+    min-width: 30%;
+    height: auto; /* Deja que la altura se ajuste según el contenido */
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Input de texto */
+input.rounded-input {
+    font-size: 16px;
+    padding: 12px 20px;
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: var(--default-font);
+}
+
+input.rounded-input:focus {
+    border-color: #007BFF; /* Cambia el color del borde al hacer foco */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Agrega una sombra sutil */
+}
+
+input.rounded-input::placeholder {
+    color: #aaa;
+}
+/*Boton de agregar tarea*/
+.btn-add {
+    font-size: 16px;
+    margin-top: 1.5%;
+    padding: 12px 20px;
+    width: 100%;
+    border: 2px solid #FFE1FF;
+    border-radius: 25px;
+    background-color: #FFE1FF;
+    font-family: var(--default-font);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+
+  .btn-add:hover {
+    background-color: #E4B1F0;
+    border: 2px solid #E4B1F0;
+}
+
+/* Título */
+h1 {
+    margin-bottom: 1rem;
+    color: #7E60BF;
+}
+/*Contenedor vacio*/
+.empty{
+    margin: 1rem;
+}
+/*Lista del contenedor*/
+.li-container{
+    display: grid;
+    justify-content: start;
+    width: 100%;
+    margin: 1.5rem;
+    padding: 16px 20px;
+    height: 150px;
+    overflow-x: auto;
+    overflow-y: auto;
+    display: none;
+}
+/*Elemento ul de la lista*/
+ul{
+    list-style-type: none;
+}
+/*Elemento item de la lista*/
+li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    }
+.contenedortareainfo{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.controw{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-x: auto;
+}
+/*Input tipo check*/
+.input-check{
+    padding: 5px;
+    align-self: center;
+}
+/*Texto tachado cuando este seleccionado el checkbox*/
+.text-done{
+    flex-grow: 1;
+    margin-right: 6rem;
+    padding-inline: 16px;
+    padding: 5px 10px;
+    text-decoration:line-through;
+    color: #7e7e7e;
+}
+/*Texto normal cuando no este seleccionado el checkbox*/
+.li-text {
+    flex-grow: 1;
+    margin-right: 6rem;
+    padding-inline: 16px;
+    padding: 5px 10px;
+}
+/*Boton eliminar item de la lista*/
+.btn-delete{
+    align-self: flex-end;
+    background-color: #ff4d4d;
+    border: none;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-delete:hover{
+    background-color: #a64040;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%; /* Aumenta el ancho en pantallas pequeñas */
+        min-width: 80%;
+    }
+    
+    .rounded-input {
+        width: 100%; /* Asegura que el input ocupe todo el ancho disponible */
+    }
+    
+    h1 {
+        font-size: 1.5rem; /* Reduce un poco el tamaño del título */
+    }
+
+    .btn-add{
+        width: 100%;
+    }
+}
+
+/* Estilos para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.2rem; /* Reduce más el tamaño del título */
+    }
+    
+    .rounded-input {
+        font-size: 1rem; /* Ajusta el tamaño del texto del input */
+    }
+
+    .btn-add {
+        font-size: 1rem; /* Ajusta el tamaño del botón */
+    }
+}
