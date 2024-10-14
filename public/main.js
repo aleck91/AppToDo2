@@ -1,8 +1,8 @@
-//Declaracion de constantes
+//Declaracion de los contenedores
 const ul = document.getElementById('listaTareas');
 const licontainer = document.querySelector('.li-container');
 const empty = document.querySelector('.empty');
-
+//Funcion agregar tarea a la lista
 const agregarTareaALista = async (tarea) => {
     console.log(tarea);
     const div = document.createElement('div');
@@ -36,7 +36,7 @@ const agregarTareaALista = async (tarea) => {
     li.append(controw);
     ul.appendChild(li);
 }
-
+//Funcion agregar tarea
 const agregarTarea = async () => {
     console.log('Agreagr');
     var today = new Date();
@@ -62,7 +62,7 @@ const agregarTarea = async () => {
     ul.innerHTML = '';
     obtenerLista();
 };
-
+//Funcion para obtener la lista de la base de datos
 async function obtenerLista() {
     const response = await fetch('http://localhost:3000/tareas');
     const data = await response.json();
@@ -79,7 +79,7 @@ async function obtenerLista() {
 };
 document.addEventListener('DOMContentLoaded', obtenerLista);
 
-
+//Llamada por primera vez para obtener la lista 
 obtenerLista();
 
 //Funcion de Tarea completada
@@ -153,7 +153,7 @@ function FDeleteBtn(id){
     //Retornar elemento eliminar boton
     return deleteBtn;
 }
-
+//Funcion para eliminar la tarea en la base de datos
 async function deleteTarea(id) {
     let result = null;
     try {
@@ -172,7 +172,7 @@ async function deleteTarea(id) {
     }
     return result;
 }
-
+//Funcion para tareas marcadas en la base de datos 
 async function updateTareadone(id) {
     let result = null;
     try {
@@ -188,7 +188,7 @@ async function updateTareadone(id) {
     }
     return result;
 }
-
+//Funcion para tareas desmarcadas
 async function updateTareaundone(id) {
     let result = null;
     try {

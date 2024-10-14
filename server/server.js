@@ -74,7 +74,7 @@ app.delete('/tareas/:id', (req, res) => {
     res.json({ message: 'Tarea eliminada correctamente' });
     });
 });
-
+//Marcar tarea completada
 app.get('/tareadone/:id', (req, res) => {
         const { id } = req.params;
         console.log(id)
@@ -88,7 +88,7 @@ app.get('/tareadone/:id', (req, res) => {
         res.json({ id: this.lastID, message: "Tarea actualizada" });
         });
 });
-
+//Desmarcar tarea 
 app.get('/tareaundone/:id', (req, res) => {
     const { id } = req.params;
     console.log(id)
